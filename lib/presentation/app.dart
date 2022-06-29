@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:nsg_biolabs/routes/app_pages.dart';
 import 'package:nsg_biolabs/routes/app_routes.dart';
+import 'package:nsg_biolabs/shared/config/text_style.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,12 +17,13 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) {
           return GetMaterialApp(
-            title: 'Flutter Demo',
+            title: 'NSG BIOLABS',
             debugShowCheckedModeBanner: false,
             getPages: AppPages.pages,
             initialRoute: Routes.login,
+              locale: const Locale("en"),
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              textTheme: CustomTextStyle.textFontApp,
             ),
           );
         });
