@@ -15,22 +15,22 @@ class CustomIcon extends StatelessWidget {
     this.svgIcon,
     this.icon,
     this.color,
-    this.size = ImageSize.medium,
+    this.size = IconSize.medium,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Visibility(
       visible: svgIcon != null ? true : false,
-      child: SvgPicture.asset(
-        "$svgIcon".getSVGImageAssets,
-        height: size.h,
-        color: color,
-      ),
       replacement: Icon(
         icon,
         color: color,
         size: size.h,
+      ),
+      child: SvgPicture.asset(
+        "$svgIcon".getSVGImageAssets,
+        height: size.h,
+        color: color,
       ),
     );
   }
