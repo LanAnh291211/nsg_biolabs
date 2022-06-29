@@ -15,7 +15,7 @@ class CustomIcon extends StatelessWidget {
     this.svgIcon,
     this.icon,
     this.color,
-    this.size = ImageSize.medium,
+    this.size = IconSize.medium,
   }) : super(key: key);
 
   @override
