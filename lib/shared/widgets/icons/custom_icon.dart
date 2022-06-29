@@ -22,15 +22,15 @@ class CustomIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Visibility(
       visible: svgIcon != null ? true : false,
-      child: SvgPicture.asset(
-        "$svgIcon".getSVGImageAssets,
-        height: size.h,
-        color: color,
-      ),
       replacement: Icon(
         icon,
         color: color,
         size: size.h,
+      ),
+      child: SvgPicture.asset(
+        "$svgIcon".getSVGImageAssets,
+        height: size.h,
+        color: color,
       ),
     );
   }
