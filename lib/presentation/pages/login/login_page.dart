@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nsg_biolabs/shared/config/config.dart';
-import 'package:nsg_biolabs/shared/widgets/buttons/custom_button.dart';
+import 'package:nsg_biolabs/shared/widgets/card%20item/view_booking_item.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,7 +15,10 @@ class LoginPage extends StatelessWidget {
         ),
         body: Padding(
           padding: CustomEdgeInsets.symmetric(horizontal: 16),
-          child: CustomButton(label: "label", onPressed: () {}),
+          child: ViewBookingItem(
+            label: 'abc',
+            content: 'abc',
+          ),
         ),
       ),
     );

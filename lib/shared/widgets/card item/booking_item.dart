@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nsg_biolabs/shared/config/config.dart';
 
 import '../../../data/model/infor.dart';
 
@@ -19,19 +20,20 @@ class BookingItem extends StatelessWidget {
             width: 5,
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 infor.title!,
-                style: TextStyle(fontWeight: FontWeight.w900),
+                style: CustomTextStyle.bold(color: AppColors.black,fontSize: FontSize.veryLarge),
               ),
               SizedBox(
                 height: 20,
               ),
               Text(
                 infor.subTitle!,
-                style: TextStyle(fontWeight: FontWeight.w200),
+                style: CustomTextStyle.medium(color: AppColors.black,fontSize: FontSize.veryLarge),
+
               ),
               Container(
                 padding: EdgeInsets.zero,

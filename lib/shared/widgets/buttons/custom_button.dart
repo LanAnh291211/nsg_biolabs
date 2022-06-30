@@ -29,17 +29,17 @@ class CustomButton extends StatelessWidget {
         textStyle: CustomTextStyle.regular(),
         primary: buttonColor,
         padding: CustomEdgeInsets.symmetric(vertical: verticalPadding.h),
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              LayoutNotifier().sizeToBorderRadiusSize(borderRadius),
-            ),
-            side: borderColor != null
-                ? BorderSide(
-                    width: borderWidth,
-                    color: borderColor!,
-                  )
-                : BorderSide.none,
-          ),
+        // shape: RoundedRectangleBorder(
+        //     borderRadius: BorderRadius.circular(
+        //       LayoutNotifier().sizeToBorderRadiusSize(borderRadius),
+        //     ),
+        //     side: borderColor != null
+        //         ? BorderSide(
+        //             width: borderWidth,
+        //             color: borderColor!,
+        //           )
+        //         : BorderSide.none,
+        //   ),
         fixedSize: Size.fromWidth(width ?? Get.width),
       ),
       child: Text(label.tr),

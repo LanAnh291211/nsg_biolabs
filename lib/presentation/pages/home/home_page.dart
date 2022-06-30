@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:nsg_biolabs/presentation/pages/pages.dart';
+import 'package:nsg_biolabs/shared/config/config.dart';
 import 'package:nsg_biolabs/shared/widgets/card%20item/booking_item.dart';
 
 import '../../../data/model/infor.dart';
@@ -25,7 +26,8 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(
             "NSG Biolab",
-            style: TextStyle(backgroundColor: Colors.white, color: Colors.black, fontWeight: FontWeight.bold),
+            // style: TextStyle(backgroundColor: Colors.white, color: Colors.black, fontWeight: FontWeight.bold),
+            style: CustomTextStyle.bold(color: AppColors.black, fontSize: FontSize.veryLarge ),
           ),
           backgroundColor: Colors.white,
           centerTitle: true,
@@ -40,7 +42,8 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   "My Upcoming Bookings",
-                  style: TextStyle(color: Colors.lime[900], fontWeight: FontWeight.bold),
+                  // style: TextStyle(color: Colors.lime[900], fontWeight: FontWeight.bold),
+                  style: CustomTextStyle.bold(color: AppColors.corduroy,fontSize: FontSize.medium),
                 ),
               ),
               // ConstrainedBox(
@@ -83,16 +86,17 @@ class _HomePageState extends State<HomePage> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
+              backgroundColor: AppColors.nobel,
+              icon: Icon(Icons.favorite_border),
+              label: 'My Favourites',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
+              icon: Icon(Icons.person),
+              label: 'Profile',
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: AppColors.hippieBlue,
           onTap: (int index) {
             setState(() {
               _selectedIndex = index;
