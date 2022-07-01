@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nsg_biolabs/shared/config/app_colors.dart';
 
 class Infor {
   Color? color;
@@ -17,42 +18,42 @@ class Infor {
 
 List<Infor> inforListDemo = [
   Infor(
-    color: Colors.purple[200],
-    title: 'Meeting Room 2',
-    subTitle: 'Level 5, Common Lab Space ',
-    releaseDay: 'May 7 (Fri)',
-    rate: '1030 - 1200',
-  ),
-  Infor(
-    color: Colors.pink[100],
+    color: AppColors.carouselPink,
     title: 'BSC 1 (Thermo)',
     subTitle: 'Level 1, Main Lab Space',
     releaseDay: 'May 7 (Fri)',
     rate: '1030 - 1200',
   ),
   Infor(
-    color: Colors.purple[200],
+    color: AppColors.lavender,
     title: 'Meeting Room 2',
     subTitle: 'Level 5, Common Lab Space ',
     releaseDay: 'May 7 (Fri)',
     rate: '1030 - 1200',
   ),
   Infor(
-    color: Colors.purple[200],
+    color: AppColors.carouselPink,
     title: 'Meeting Room 2',
     subTitle: 'Level 5, Common Lab Space ',
     releaseDay: 'May 7 (Fri)',
     rate: '1030 - 1200',
   ),
   Infor(
-    color: Colors.purple[200],
+    color: AppColors.columbiaBlue,
     title: 'Meeting Room 2',
     subTitle: 'Level 5, Common Lab Space ',
     releaseDay: 'May 7 (Fri)',
     rate: '1030 - 1200',
   ),
   Infor(
-    color: Colors.purple[200],
+    color: AppColors.carouselPink,
+    title: 'Meeting Room 2',
+    subTitle: 'Level 5, Common Lab Space ',
+    releaseDay: 'May 7 (Fri)',
+    rate: '1030 - 1200',
+  ),
+  Infor(
+    color: AppColors.shalimar,
     title: 'Meeting Room 2',
     subTitle: 'Level 5, Common Lab Space ',
     releaseDay: 'May 7 (Fri)',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nsg_biolabs/presentation/pages/pages.dart';
 import 'package:nsg_biolabs/shared/config/config.dart';
 import 'package:nsg_biolabs/shared/widgets/card%20item/booking_item.dart';
@@ -27,50 +28,48 @@ class _HomePageState extends State<HomePage> {
           title: Text(
             "NSG Biolab",
             // style: TextStyle(backgroundColor: Colors.white, color: Colors.black, fontWeight: FontWeight.bold),
-            style: CustomTextStyle.bold(color: AppColors.black, fontSize: FontSize.veryLarge ),
+            style: CustomTextStyle.bold(color: AppColors.black, fontSize: FontSize.veryLarge),
           ),
           backgroundColor: Colors.white,
           centerTitle: true,
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 10, top: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Text(
-                  "My Upcoming Bookings",
-                  // style: TextStyle(color: Colors.lime[900], fontWeight: FontWeight.bold),
-                  style: CustomTextStyle.bold(color: AppColors.corduroy,fontSize: FontSize.medium),
-                ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 22.h),
+              child: Text(
+                "My Upcoming Bookings",
+                // style: TextStyle(color: Colors.lime[900], fontWeight: FontWeight.bold),
+                style: CustomTextStyle.bold(color: AppColors.corduroy, fontSize: FontSize.medium),
               ),
-              // ConstrainedBox(
-              //   constraints: BoxConstraints(),
-              //   child: SingleChildScrollView(
-              //     scrollDirection: Axis.vertical,
+            ),
+            // ConstrainedBox(
+            //   constraints: BoxConstraints(),
+            //   child: SingleChildScrollView(
+            //     scrollDirection: Axis.vertical,
 
-              //     child: Column(
-              //       children: List.generate(inforListDemo.length, (index) => _item(inforListDemo[index])),
-              //     ),
-              //   ),
-              // ),
-              Expanded(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  physics: ClampingScrollPhysics(),
-                  itemCount: inforListDemo.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return BookingItem(infor:  inforListDemo[index]);
-                  },
-                ),
+            //     child: Column(
+            //       children: List.generate(inforListDemo.length, (index) => _item(inforListDemo[index])),
+            //     ),
+            //   ),
+            // ),
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                physics: ClampingScrollPhysics(),
+                itemCount: inforListDemo.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return BookingItem(infor: inforListDemo[index]);
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: AppColors.hippieBlue,
           onPressed: () => Navigator.push(
             context,
             MaterialPageRoute<void>(
@@ -106,6 +105,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  
 }
