@@ -11,11 +11,11 @@ class LoginPage extends StatelessWidget {
       top: true,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Login"),
+          title: Text("Login"), // title login app bar
         ),
         body: Padding(
           padding: CustomEdgeInsets.symmetric(horizontal: 16),
-          child: CustomButton(label: "label", onPressed: () {}),
+          child: CustomButton(label: "label", onPressed: () {}), // login button
         ),
       ),
     );
